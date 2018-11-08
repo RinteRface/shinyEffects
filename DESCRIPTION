@@ -11,10 +11,7 @@ License: GPL-2
 Imports: htmltools, shiny, shinydashboard
 Suggests: 
     shinydashboardPlus,
-    bs4Dash,
-    shinyWidgets,
-    knitr,
-    rmarkdown
+    bs4Dash
 URL: https://github.com/DivadNojnarg/shinyEffects, https://divadnojnarg.github.io/shinyEffects/
 BugReports: https://github.com/DivadNojnarg/shinyEffects/issues
 Encoding: UTF-8

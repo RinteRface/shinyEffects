@@ -2,7 +2,11 @@ library(shiny)
 library(shinyEffects)
 library(shinydashboard)
 library(shinydashboardPlus)
-library(shinyWidgets)
+
+setShadow <- shinyEffects::setShadow
+setPulse <- shinyEffects::setPulse
+setShake <- shinyEffects::setShake
+setZoom <- shinyEffects::setZoom
 
 boxTag <- boxPlus(
   title = "Box with zoom Effect",
