@@ -1,0 +1,6 @@
+^docs$
+^_pkgdown\.yml$
+^cran-comments\.md$
+^\.travis\.yml$
+^.*\.Rproj$
+^\.Rproj\.user$

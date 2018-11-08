@@ -1,0 +1,23 @@
+Package: shinyEffects
+Type: Package
+Title: Customize Your Shiny Apps With Fancy Effects
+Version: 0.1.0
+Authors@R: c(
+  person("David", "Granjon", email = "dgranjon@ymail.com", role = c("aut", "cre")))
+Maintainer: David Granjon <dgranjon@ymail.com>
+Description: Add fancy CSS effects to your shinydashboards or shiny apps.
+             100% compatible with shinydashboardPlus and bs4Dash.
+License: GPL-2
+Imports: htmltools, shiny, shinydashboard
+Suggests: 
+    shinydashboardPlus,
+    bs4Dash,
+    shinyWidgets,
+    knitr,
+    rmarkdown
+URL: https://github.com/DivadNojnarg/shinyEffects
+BugReports: https://github.com/DivadNojnarg/shinyEffects/issues
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.0
+VignetteBuilder: knitr
