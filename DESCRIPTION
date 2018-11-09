@@ -11,10 +11,11 @@ License: GPL-2
 Imports: htmltools, shiny, shinydashboard
 Suggests: 
     shinydashboardPlus,
-    bs4Dash
+    bs4Dash,
+    knitr
 URL: https://github.com/DivadNojnarg/shinyEffects, https://divadnojnarg.github.io/shinyEffects/
 BugReports: https://github.com/DivadNojnarg/shinyEffects/issues
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
 VignetteBuilder: knitr

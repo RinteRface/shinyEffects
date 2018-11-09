@@ -13,7 +13,6 @@
 #'  if (interactive()) {
 #'
 #'   library(shiny)
-#'   library(shinyWidgets)
 #'   library(shinydashboard)
 #'   library(shinydashboardPlus)
 #'   library(shinyEffects)

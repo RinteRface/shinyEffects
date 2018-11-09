@@ -22,7 +22,6 @@ Allow to apply a zoom on a given element.
  if (interactive()) {
 
   library(shiny)
-  library(shinyWidgets)
   library(shinydashboard)
   library(shinydashboardPlus)
   library(shinyEffects)
