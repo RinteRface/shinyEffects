@@ -1,4 +1,4 @@
-# shinyEffects
+# shinyEffects <img src="man/figures/shinyEffects_pink.png" width=200 align="right" />
 [![Travis build status](https://travis-ci.org/DivadNojnarg/shinyEffects.svg?branch=master)](https://travis-ci.org/DivadNojnarg/shinyEffects)
 [![CRAN status](https://www.r-pkg.org/badges/version/shinyEffects)](https://cran.r-project.org/package=shinyEffects)
 
