@@ -26,10 +26,14 @@ Use the `setShadow()` function as shown below.
 <summary>Code</summary>
 ```r
   library(shiny)
-  library(shinyWidgets)
   library(shinydashboard)
   library(shinydashboardPlus)
   library(shinyEffects)
+  
+  setShadow <- shinyEffects::setShadow
+  setPulse <- shinyEffects::setPulse
+  setShake <- shinyEffects::setShake
+  setZoom <- shinyEffects::setZoom
 
   boxTag <- boxPlus(
    title = "Closable box, with label",
@@ -98,10 +102,14 @@ which is widely enough).
 <summary>Code</summary>
 ```r
   library(shiny)
-  library(shinyWidgets)
   library(shinydashboard)
   library(shinydashboardPlus)
   library(shinyEffects)
+  
+  setShadow <- shinyEffects::setShadow
+  setPulse <- shinyEffects::setPulse
+  setShake <- shinyEffects::setShake
+  setZoom <- shinyEffects::setZoom
 
   boxTag <- boxPlus(
    title = "Closable box, with label",
@@ -169,10 +177,14 @@ Use the `setPulse()` function as shown below. You can choose the number of itera
 <summary>Code</summary>
 ```r
   library(shiny)
-  library(shinyWidgets)
   library(shinydashboard)
   library(shinydashboardPlus)
   library(shinyEffects)
+  
+  setShadow <- shinyEffects::setShadow
+  setPulse <- shinyEffects::setPulse
+  setShake <- shinyEffects::setShake
+  setZoom <- shinyEffects::setZoom
 
   boxTag <- boxPlus(
    title = "Closable box, with label",
@@ -239,10 +251,14 @@ Use the `setShake()` function as shown below. You can choose the shake frequency
 <summary>Code</summary>
 ```r
   library(shiny)
-  library(shinyWidgets)
   library(shinydashboard)
   library(shinydashboardPlus)
   library(shinyEffects)
+  
+  setShadow <- shinyEffects::setShadow
+  setPulse <- shinyEffects::setPulse
+  setShake <- shinyEffects::setShake
+  setZoom <- shinyEffects::setZoom
 
   boxTag <- boxPlus(
    title = "Closable box, with label",
