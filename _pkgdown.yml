@@ -6,6 +6,12 @@ reference:
   - '`setZoom`'
   - '`setPulse`'
   - '`setShake`'
+  - '`setBlur`'
+
+- title: Containers
+  desc: a container in which the effect should be applied
+  contents:
+  - '`blurContainer`'
 
 - title: The Gallery
   desc: a showcase for shinyEffects

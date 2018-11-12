@@ -317,6 +317,76 @@ Use the `setShake()` function as shown below. You can choose the shake frequency
 </details>
 <br>
 
+
+## Set Blur effect on any element (on hover)
+
+Use the `setBlur()` and `blurContainer()` functions as shown below. 
+You can choose the blur intensity (2px by default).
+
+<details>
+```r
+library(shiny)
+  library(shinydashboard)
+  library(shinydashboardPlus)
+  library(shinyEffects)
+
+  boxTag <- boxPlus(
+   title = "Closable box, with label",
+   closable = TRUE,
+   enable_label = TRUE,
+   label_text = 1,
+   label_status = "danger",
+   status = "warning",
+   solidHeader = FALSE,
+   collapsible = TRUE,
+   p("Box Content")
+  )
+
+  shinyApp(
+   ui = dashboardPagePlus(
+     header = dashboardHeaderPlus(
+       enable_rightsidebar = TRUE,
+       rightSidebarIcon = "gears"
+     ),
+     sidebar = dashboardSidebar(),
+     body = dashboardBody(
+
+      setBlur(),
+
+      tags$h2("Add blur animation to the box class"),
+      fluidRow(blurContainer(boxTag), boxTag),
+      tags$h2("Add blur animation only to the first element using id"),
+      fluidRow(
+       blurContainer(
+        verticalProgress(
+         value = 10,
+         striped = TRUE,
+         active = TRUE
+        )
+       ),
+       verticalProgress(
+         value = 50,
+         active = TRUE,
+         status = "warning",
+         size = "xs"
+       ),
+       verticalProgress(
+         value = 20,
+         status = "danger",
+         size = "sm",
+         height = "60%"
+       )
+      )
+     ),
+     rightsidebar = rightSidebar(),
+     title = "DashboardPage"
+   ),
+   server = function(input, output) { }
+  )
+  ```
+  </details>
+  <br>
+
 ## Combine CSS effects
 
 You can combine all the previous effects according to your needs.
