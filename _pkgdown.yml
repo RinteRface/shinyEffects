@@ -7,6 +7,7 @@ reference:
   - '`setPulse`'
   - '`setShake`'
   - '`setBlur`'
+  - '`setPersp`'
 
 - title: Containers
   desc: a container in which the effect should be applied

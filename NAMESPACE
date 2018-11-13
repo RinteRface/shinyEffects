@@ -2,6 +2,7 @@
 
 export(blurContainer)
 export(setBlur)
+export(setPersp)
 export(setPulse)
 export(setShadow)
 export(setShake)

@@ -324,8 +324,9 @@ Use the `setBlur()` and `blurContainer()` functions as shown below.
 You can choose the blur intensity (2px by default).
 
 <details>
+<summary>Code</summary>
 ```r
-library(shiny)
+  library(shiny)
   library(shinydashboard)
   library(shinydashboardPlus)
   library(shinyEffects)
@@ -386,6 +387,59 @@ library(shiny)
   ```
   </details>
   <br>
+  
+## Set perspective effect on any element (on hover)
+
+Use the `setPersp()` function as shown below. 
+You can choose the perspective angle, depth, side and even decide whether to trigger it on hover.
+
+<details>
+<summary>Code</summary>
+```r
+  library(shiny)
+  library(shinydashboard)
+  library(shinydashboardPlus)
+  library(shinyEffects)
+
+  boxTag <- boxPlus(
+   title = "Closable box, with label",
+   closable = TRUE,
+   enable_label = TRUE,
+   label_text = 1,
+   label_status = "danger",
+   status = "warning",
+   solidHeader = FALSE,
+   collapsible = TRUE,
+   p("Box Content")
+  )
+
+  shinyApp(
+   ui = dashboardPagePlus(
+     header = dashboardHeaderPlus(
+       enable_rightsidebar = TRUE,
+       rightSidebarIcon = "gears"
+     ),
+     sidebar = dashboardSidebar(),
+     body = dashboardBody(
+
+      setPersp(id = "my-box-1", angle = 45),
+      setPersp(id = "my-box-2", angle = 45, side = "right", hover = TRUE),
+
+      tags$h2("Add Perspective effects"),
+      br(),
+      fluidRow(
+       tagAppendAttributes(boxTag[[2]], id = "my-box-1"),
+       tagAppendAttributes(boxTag[[2]], id = "my-box-2")
+      )
+     ),
+     rightsidebar = rightSidebar(),
+     title = "DashboardPage"
+   ),
+   server = function(input, output) { }
+  )
+```
+</details>
+<br>
 
 ## Combine CSS effects
 
