@@ -3,7 +3,9 @@ Type: Package
 Title: Customize Your Web Apps with Fancy Effects
 Version: 0.1.0
 Authors@R: c(
-  person("David", "Granjon", email = "dgranjon@ymail.com", role = c("aut", "cre")))
+  person("David", "Granjon", email = "dgranjon@ymail.com", role = c("aut", "cre")),
+  person(family = "RinteRface", role = "cph")
+  )
 Maintainer: David Granjon <dgranjon@ymail.com>
 Description: Add fancy CSS effects to your 'shinydashboards' or 'shiny' apps.
              100% compatible with 'shinydashboardPlus' and 'bs4Dash'.

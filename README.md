@@ -9,6 +9,9 @@ Customize your shiny apps with these nice CSS effects
 ## Installation
 
 ```r
+# from CRAN
+install.packages("shinyEffects")
+# Latest version
 devtools::install_github("DivadNojnarg/shinyEffects")
 ```
 
