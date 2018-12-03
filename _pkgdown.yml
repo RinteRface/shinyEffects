@@ -47,7 +47,7 @@ navbar:
       href: news/index.html
     github:
       icon: fa-github fa-lg
-      href: https://github.com/DivadNojnarg/shinyEffects
+      href: https://github.com/RinteRface/shinyEffects
 
 
 articles:
@@ -58,4 +58,5 @@ articles:
 
 news:
  releases:
+ - text: " shinyEffects 0.2.0.9000"
  - text: "shinyEffects 0.1.0"
