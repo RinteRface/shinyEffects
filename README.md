@@ -22,7 +22,7 @@ library(shinyEffects)
 shinyEffectsGallery()
 ```
 
-See also [here](https://www.rinterface.com/shiny/shinyEffects/)
+See also [here](https://rinterface.com/shiny/shinyEffects/)
 
 ## Related Packages
 
