@@ -1,10 +1,12 @@
 # shinyEffects <img src="man/figures/shinyEffects_pink.png" width=200 align="right" />
 [![Travis build status](https://travis-ci.org/RinteRface/shinyEffects.svg?branch=master)](https://travis-ci.org/RinteRface/shinyEffects)
 [![CRAN status](https://www.r-pkg.org/badges/version/shinyEffects)](https://cran.r-project.org/package=shinyEffects)
+[![cranlogs](https://cranlogs.r-pkg.org/badges/shinyEffects)](https://cran.r-project.org/package=shinyEffects)
+[![total](https://cranlogs.r-pkg.org/badges/grand-total/shinyEffects)](https://www.rpackages.io/package/shinyEffects)
 
 > Fancy CSS effects for shiny
 
-Customize your shiny apps with these nice CSS effects
+Customize your shiny apps with these CSS effects.
 
 ## Installation
 
