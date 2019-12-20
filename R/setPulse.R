@@ -223,7 +223,6 @@ set_pulse <- function(session = shiny::getDefaultReactiveDomain(), id = NULL,
   message <- dropNulls(
     list(
       selector = cssSelector,
-      cl = class,
       timeout = duration,
       n = iteration
     )
