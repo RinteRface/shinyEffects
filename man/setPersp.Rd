@@ -4,8 +4,15 @@
 \alias{setPersp}
 \title{Custom perspective effect}
 \usage{
-setPersp(id = NULL, class = NULL, direction = "Y", angle = 45,
-  depth = 600, side = "left", hover = FALSE)
+setPersp(
+  id = NULL,
+  class = NULL,
+  direction = "Y",
+  angle = 45,
+  depth = 600,
+  side = "left",
+  hover = FALSE
+)
 }
 \arguments{
 \item{id}{Use this argument if you want to target an individual element.}
