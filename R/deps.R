@@ -27,10 +27,10 @@ use_effects <- function() {
   singleton(
     tags$head(
       tags$script(
-        src = system.file("js/shinyeffects.js", package = "shinyEffects")
+        src = "shinyeffects-assets/js/shinyeffects.js"
       ),
       tags$link(
-        href = system.file("css/shinyeffects.css", package = "shinyEffects"),
+        href = "shinyeffects-assets/css/shinyeffects.css",
         rel = "stylesheet",
         type = "text/css"
       )

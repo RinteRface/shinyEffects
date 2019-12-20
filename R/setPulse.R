@@ -142,12 +142,8 @@ setPulse <- function(id = NULL, class = NULL, duration = 1, iteration = 5) {
 #'
 #' Allow to apply a pulse animation on a given element.
 #'
-#' @param id Use this argument if you want to target an individual element.
-#' @param class The element to which the pulse should be applied.
-#' For example, class is set to box. All elements having the box class
-#' will be affected.
-#' @param duration Pulse frequency. 1s by default.
-#' @param iteration Pulse iteration. 5 by default.
+#' @param session Shiny session object.
+#' @inheritParams setPulse
 #'
 #' @export
 #'

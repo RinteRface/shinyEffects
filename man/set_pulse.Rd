@@ -13,6 +13,8 @@ set_pulse(
 )
 }
 \arguments{
+\item{session}{Shiny session object.}
+
 \item{id}{Use this argument if you want to target an individual element.}
 
 \item{class}{The element to which the pulse should be applied.
