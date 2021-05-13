@@ -17,12 +17,8 @@
 #'   library(shinydashboardPlus)
 #'   library(shinyEffects)
 #'
-#'   boxTag <- boxPlus(
-#'    title = "Closable box, with label",
-#'    closable = TRUE,
-#'    enable_label = TRUE,
-#'    label_text = 1,
-#'    label_status = "danger",
+#'   boxTag <- box(
+#'    title = "A box",
 #'    status = "warning",
 #'    solidHeader = FALSE,
 #'    collapsible = TRUE,
@@ -30,11 +26,8 @@
 #'   )
 #'
 #'   shinyApp(
-#'    ui = dashboardPagePlus(
-#'      header = dashboardHeaderPlus(
-#'        enable_rightsidebar = TRUE,
-#'        rightSidebarIcon = "gears"
-#'      ),
+#'    ui = dashboardPage(
+#'      header = dashboardHeader(),
 #'      sidebar = dashboardSidebar(),
 #'      body = dashboardBody(
 #'
@@ -45,27 +38,21 @@
 #'       fluidRow(boxTag, boxTag),
 #'       tags$h2("Add shake only to the first element using id"),
 #'       tagAppendAttributes(
-#'        verticalProgress(
+#'        progressBar(
 #'         value = 10,
 #'         striped = TRUE,
-#'         active = TRUE
+#'         animated = TRUE,
+#'         vertical = TRUE
 #'        ),
 #'        id = "my-progress"
 #'       ),
-#'       verticalProgress(
-#'         value = 50,
-#'         active = TRUE,
-#'         status = "warning",
-#'         size = "xs"
-#'       ),
-#'       verticalProgress(
-#'         value = 20,
-#'         status = "danger",
-#'         size = "sm",
-#'         height = "60%"
+#'       progressBar(
+#'        value = 50,
+#'        status = "warning",
+#'        size = "xs",
 #'       )
 #'      ),
-#'      rightsidebar = rightSidebar(),
+#'      controlbar = dashboardControlbar(),
 #'      title = "Shake Effect"
 #'    ),
 #'    server = function(input, output) { }
