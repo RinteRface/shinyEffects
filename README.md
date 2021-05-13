@@ -1,6 +1,6 @@
 # shinyEffects <img src="man/figures/shinyEffects_pink.png" width=200 align="right" />
-[![Travis build status](https://travis-ci.org/RinteRface/shinyEffects.svg?branch=master)](https://travis-ci.org/RinteRface/shinyEffects)
 [![CRAN status](https://www.r-pkg.org/badges/version/shinyEffects)](https://cran.r-project.org/package=shinyEffects)
+[![R-CMD-check](https://github.com/RinteRface/shinyEffects/workflows/R-CMD-check/badge.svg)](https://github.com/RinteRface/shinyEffects/actions)
 
 > Fancy CSS effects for shiny
 
