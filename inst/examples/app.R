@@ -51,8 +51,8 @@ shinyApp(
     dashboardHeader(),
     dashboardSidebar(),
     dashboardBody(
-      setZoom(class = "box"),
-      setPulse(class = "label"),
+      setZoom(class = "card"),
+      setPulse(class = "badge"),
       setShadow(class = "btn-app"),
       h1("Set group effects using class"),
       h3("Zoom Effet"),
