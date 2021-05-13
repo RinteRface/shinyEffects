@@ -13,8 +13,6 @@
 #'
 #' }
 shinyEffectsGallery <- function() { # nocov start
-  if (!requireNamespace(package = "shinydashboardPlus"))
-    message("Package 'shinydashboardPlus' is required to run this function")
   if (!requireNamespace(package = "bs4Dash"))
     message("Package 'bs4Dash' is required to run this function")
 

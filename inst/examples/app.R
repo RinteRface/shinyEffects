@@ -1,19 +1,14 @@
 library(shiny)
 library(shinyEffects)
-library(shinydashboard)
-library(shinydashboardPlus)
+library(bs4Dash)
 
-setShadow <- shinyEffects::setShadow
-setPulse <- shinyEffects::setPulse
-setShake <- shinyEffects::setShake
-setZoom <- shinyEffects::setZoom
-
-boxTag <- boxPlus(
+boxTag <- box(
   title = "Box with zoom Effect",
   closable = TRUE,
-  enable_label = TRUE,
-  label_text = 1,
-  label_status = "danger",
+  label = boxLabel(
+    text = 1,
+    status = "danger",
+  ),
   status = "warning",
   solidHeader = FALSE,
   collapsible = TRUE,
@@ -21,12 +16,10 @@ boxTag <- boxPlus(
 )
 
 btnTag <- appButton(
-  url = "http://google.com",
+  inputId = "myAppButton",
   label = "Users",
-  icon = "fa fa-users",
-  enable_badge = TRUE,
-  badgeColor = "purple",
-  badgeLabel = 891
+  icon = icon("users"),
+  dashboardBadge(textOutput("btnVal"), color = "primary")
 )
 
 timelineTag <- column(
@@ -38,7 +31,7 @@ timelineTag <- column(
     timelineLabel(2018, color = "teal"),
     timelineItem(
       title = "Item 1",
-      icon = "gears",
+      icon = icon("gears"),
       color = "olive",
       time = "now",
       footer = "Here is the footer",
@@ -49,63 +42,42 @@ timelineTag <- column(
       border = FALSE
     ),
     timelineLabel(2015, color = "orange"),
-    timelineStart(color = "gray")
+    timelineStart(color = "purple")
   )
 )
-
-pillTag <- navPills(
-  navPillsItem(
-    active = TRUE,
-    pillName = "Item 1",
-    pillColor = "green",
-    pillIcon = NULL,
-    pillText = "Some text here"
-  ),
-  navPillsItem(
-    pillName = "Item 2",
-    pillColor = "red",
-    pillIcon = "fa fa-angle-down",
-    pillText = "10%"
-  )
-)
-
 
 shinyApp(
-  ui = dashboardPagePlus(
-    dashboardHeaderPlus(),
+  ui = dashboardPage(
+    dashboardHeader(),
     dashboardSidebar(),
     dashboardBody(
-      setZoom(class = "box"),
-      setPulse(class = "label"),
+      setZoom(class = "card"),
+      setPulse(class = "badge"),
       setShadow(class = "btn-app"),
       h1("Set group effects using class"),
       h3("Zoom Effet"),
-      fluidRow(boxTag, boxTag),
+      fluidRow(boxTag),
       h3("Pulse Effect"),
       br(),
       uiOutput("badgeTag"),
       h3("Shadow Effect"),
       br(),
-      fluidRow(btnTag, btnTag, btnTag),
+      fluidRow(btnTag),
       h1("Set individual effects using id"),
       br(),
       setShake(id = "my-timeline"),
       setZoom(id = "my-pill"),
       h3("Shake Effect"),
       br(),
-      fluidRow(tagAppendAttributes(timelineTag, id = "my-timeline"), timelineTag),
-      h3("Zoom Effect"),
-      br(),
-      fluidRow(
-        column(width = 6, pillTag),
-        column(width = 6, tagAppendAttributes(pillTag, id = "my-pill"))
-      )
+      fluidRow(tagAppendAttributes(timelineTag, id = "my-timeline"), timelineTag)
     )
   ),
   server = function(input, output) {
+    output$btnVal <- renderText(input$myAppButton)
+
     output$badgeTag <- renderUI({
       invalidateLater(1000)
-      lapply(1:4, dashboardLabel, status = "warning")
+      lapply(1:4, dashboardBadge, color = "warning")
     })
   }
 )

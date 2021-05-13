@@ -2,7 +2,7 @@
 % Please edit documentation in R/setPulse.R
 \name{setPulse}
 \alias{setPulse}
-\title{Custom pulse animation}
+\title{Custom pulse animation: UI side}
 \usage{
 setPulse(id = NULL, class = NULL, duration = 1, iteration = 5)
 }
@@ -29,11 +29,7 @@ Allow to apply a pulse animation on a given element.
   library(shinyEffects)
 
   boxTag <- boxPlus(
-   title = "Closable box, with label",
-   closable = TRUE,
-   enable_label = TRUE,
-   label_text = 1,
-   label_status = "danger",
+   title = "A box",
    status = "warning",
    solidHeader = FALSE,
    collapsible = TRUE,
@@ -41,11 +37,8 @@ Allow to apply a pulse animation on a given element.
   )
 
   shinyApp(
-   ui = dashboardPagePlus(
-     header = dashboardHeaderPlus(
-       enable_rightsidebar = TRUE,
-       rightSidebarIcon = "gears"
-     ),
+   ui = dashboardPage(
+     header = dashboardHeader(),
      sidebar = dashboardSidebar(),
      body = dashboardBody(
 
@@ -56,27 +49,22 @@ Allow to apply a pulse animation on a given element.
       fluidRow(boxTag, boxTag),
       tags$h2("Add pulse animation only to the first element using id"),
       tagAppendAttributes(
-       verticalProgress(
+       progressBar(
         value = 10,
         striped = TRUE,
-        active = TRUE
+        animated = TRUE,
+        vertical = TRUE
        ),
        id = "my-progress"
       ),
-      verticalProgress(
-        value = 50,
-        active = TRUE,
-        status = "warning",
-        size = "xs"
-      ),
-      verticalProgress(
-        value = 20,
-        status = "danger",
-        size = "sm",
-        height = "60\%"
+      progressBar(
+       value = 50,
+       status = "warning",
+       size = "xs",
+       vertical = TRUE
       )
      ),
-     rightsidebar = rightSidebar(),
+     controlbar = dashboardControlbar(),
      title = "DashboardPage"
    ),
    server = function(input, output) { }

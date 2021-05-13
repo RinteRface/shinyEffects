@@ -20,12 +20,9 @@
 #'   library(shinydashboardPlus)
 #'   library(shinyEffects)
 #'
-#'   boxTag <- boxPlus(
-#'    title = "Closable box, with label",
-#'    closable = TRUE,
-#'    enable_label = TRUE,
-#'    label_text = 1,
-#'    label_status = "danger",
+#'   boxTag <- box(
+#'    id = "mybox",
+#'    title = "A box",
 #'    status = "warning",
 #'    solidHeader = FALSE,
 #'    collapsible = TRUE,
@@ -33,25 +30,18 @@
 #'   )
 #'
 #'   shinyApp(
-#'    ui = dashboardPagePlus(
-#'      header = dashboardHeaderPlus(
-#'        enable_rightsidebar = TRUE,
-#'        rightSidebarIcon = "gears"
-#'      ),
+#'    ui = dashboardPage(
+#'      header = dashboardHeader(),
 #'      sidebar = dashboardSidebar(),
 #'      body = dashboardBody(
 #'
-#'       setPersp(id = "my-box-1", angle = 45),
-#'       setPersp(id = "my-box-2", angle = 45, side = "right", hover = TRUE),
+#'       setPersp(id = "mybox", angle = 45),
 #'
 #'       tags$h2("Add Perspective effects"),
 #'       br(),
-#'       fluidRow(
-#'        tagAppendAttributes(boxTag[[2]], id = "my-box-1"),
-#'        tagAppendAttributes(boxTag[[2]], id = "my-box-2")
-#'       )
+#'       boxTag
 #'      ),
-#'      rightsidebar = rightSidebar(),
+#'      controlbar = dashboardControlbar(),
 #'      title = "DashboardPage"
 #'    ),
 #'    server = function(input, output) { }
