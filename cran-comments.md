@@ -1,7 +1,6 @@
 ## Test environments
-* local OS X install, R 3.4.4
-* ubuntu 14.04 (on travis-ci), R 3.4.4
-* R-hub (devtools)
+* local OS X install, R 4.0.2
+* R-hub
 * win-builder (devel and release)
 
 ## R CMD check results
