@@ -17,8 +17,7 @@ Suggests:
     bs4Dash,
     rmarkdown,
     knitr
-URL: https://github.com/RinteRface/shinyEffects, https://divadnojnarg.github.io/RinteRface/
+URL: https://github.com/RinteRface/shinyEffects
 BugReports: https://github.com/RinteRface/shinyEffects/issues
 Encoding: UTF-8
 RoxygenNote: 7.1.1.9000
-VignetteBuilder: knitr
