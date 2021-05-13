@@ -14,12 +14,8 @@
 #'   library(shinydashboardPlus)
 #'   library(shinyEffects)
 #'
-#'   boxTag <- boxPlus(
+#'   boxTag <- box(
 #'    title = "Closable box, with label",
-#'    closable = TRUE,
-#'    enable_label = TRUE,
-#'    label_text = 1,
-#'    label_status = "danger",
 #'    status = "warning",
 #'    solidHeader = FALSE,
 #'    collapsible = TRUE,
@@ -27,42 +23,14 @@
 #'   )
 #'
 #'   shinyApp(
-#'    ui = dashboardPagePlus(
-#'      header = dashboardHeaderPlus(
-#'        enable_rightsidebar = TRUE,
-#'        rightSidebarIcon = "gears"
-#'      ),
+#'    ui = dashboardPage(
+#'      header = dashboardHeader(),
 #'      sidebar = dashboardSidebar(),
 #'      body = dashboardBody(
-#'
 #'       setBlur(),
-#'
-#'       tags$h2("Add blur animation to the box class"),
-#'       fluidRow(blurContainer(boxTag), boxTag),
-#'       tags$h2("Add blur animation only to the first element using id"),
-#'       fluidRow(
-#'        blurContainer(
-#'         verticalProgress(
-#'          value = 10,
-#'          striped = TRUE,
-#'          active = TRUE
-#'         )
-#'        ),
-#'        verticalProgress(
-#'          value = 50,
-#'          active = TRUE,
-#'          status = "warning",
-#'          size = "xs"
-#'        ),
-#'        verticalProgress(
-#'          value = 20,
-#'          status = "danger",
-#'          size = "sm",
-#'          height = "60%"
-#'        )
-#'       )
+#'       fluidRow(blurContainer(boxTag), boxTag)
 #'      ),
-#'      rightsidebar = rightSidebar(),
+#'      controlbar = dashboardControlbar(),
 #'      title = "DashboardPage"
 #'    ),
 #'    server = function(input, output) { }
