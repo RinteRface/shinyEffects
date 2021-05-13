@@ -15,7 +15,7 @@
 #'   library(shinyEffects)
 #'
 #'   boxTag <- box(
-#'    title = "Closable box, with label",
+#'    title = "A box",
 #'    status = "warning",
 #'    solidHeader = FALSE,
 #'    collapsible = TRUE,

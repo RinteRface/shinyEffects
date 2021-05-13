@@ -21,7 +21,7 @@ Allow to apply a blur effect on a given element.
   library(shinyEffects)
 
   boxTag <- box(
-   title = "Closable box, with label",
+   title = "A box",
    status = "warning",
    solidHeader = FALSE,
    collapsible = TRUE,
