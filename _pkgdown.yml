@@ -50,13 +50,13 @@ navbar:
       href: https://github.com/RinteRface/shinyEffects
 
 
-articles:
-- title: All vignettes
-  desc: ~
-  contents:
-  - '`css_effects`'
+# articles:
+# - title: All vignettes
+#   desc: ~
+#   contents:
+#   - '`css_effects`'
 
 news:
  releases:
- - text: " shinyEffects 0.2.0.9000"
+ - text: " shinyEffects 0.2.0"
  - text: "shinyEffects 0.1.0"

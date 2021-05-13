@@ -1,7 +1,7 @@
 Package: shinyEffects
 Type: Package
 Title: Customize Your Web Apps with Fancy Effects
-Version: 0.2.0.9000
+Version: 0.2.0
 Authors@R: c(
   person("David", "Granjon", email = "dgranjon@ymail.com", role = c("aut", "cre")),
   person(family = "RinteRface", role = "cph")
@@ -10,8 +10,9 @@ Maintainer: David Granjon <dgranjon@ymail.com>
 Description: Add fancy CSS effects to your 'shinydashboards' or 'shiny' apps.
              100% compatible with 'shinydashboardPlus' and 'bs4Dash'.
 License: GPL (>= 2) | file LICENSE
-Imports: htmltools, shiny, shinydashboard
+Imports: htmltools, shiny
 Suggests: 
+    shinydashboard,
     shinydashboardPlus,
     bs4Dash,
     rmarkdown,
