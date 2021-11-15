@@ -24,8 +24,6 @@ library(shinyEffects)
 shinyEffectsGallery()
 ```
 
-See also [here](https://rinterface.com/shiny/shinyEffects/)
-
 ## Note
 `{shinyEffects}` has been updated to work with `{shinydashboardPlus}` 2.0.0 and `{bs4Dash}` 2.0.0
 
